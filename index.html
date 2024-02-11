@@ -10,33 +10,37 @@
 
 <body>
     <main class="container-pet">
-        <section class="main-info">
-            <div class="personal-info">
-                <span>Name Pet</span>
-                <span>age</span>
-            </div>
-            <div class="pet-img">
-                <img src="img/pet-1.png" alt="">
-            </div>
-            <div class="pet-points">
-                <ul>
-                    <li>Health</li>
-                    <li>Hunger</li>
-                    <li>Happiness</li>
-                </ul>
-            </div>
-        </section>
-        <div class="actions">
-            <ul>
-                <li><button>Clean</button></li>
-                <li><button>Feed</button></li>
-                <li><Button>Play</Button></li>
-            </ul>
+        <div class="personal-info">
+            <p>Name Pet</p>
+            <p>age</p>
         </div>
-        <div class="settings">
-            <button>Settings</button>
+        <div class="pet-img">
+            <img src="img/pet-1.png" alt="">
         </div>
     </main>
+    <div class="pet-points">
+        <ul>
+            <li>Health</li>
+            <progress id="health" value="50" max="100"></progress>
+
+            <li>Hunger</li>
+            <progress id="hunger" value="75" max="100"></progress>
+
+            <li>Happiness</li>
+            <progress id="happiness" value="90" max="100"></progress>
+        </ul>
+    </div>
+
+    <section class="actions">
+        <ul>
+            <li><button>Clean</button></li>
+            <li><button>Feed</button></li>
+            <li><Button>Play</Button></li>
+        </ul>
+    </section>
+    <div class="settings">
+        <button>Settings</button>
+    </div>
 </body>
 
 </html>
