@@ -1,66 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <main class="container-pet">
-        <div class="personal-info">
-            <p id="pet-name"></p>
-            <p id="pet-age">0</p>
-        </div>
-        <div class="pet-img">
-            <img src="img/pet-1.png" alt="" />
-        </div>
+      <div class="personal-info">
+        <p id="pet-name"></p>
+        <p id="pet-age">0</p>
+      </div>
+      <div class="pet-img">
+        <img src="img/pet-1.png" alt="" />
+      </div>
     </main>
 
     <div class="pet-points">
-        <ul>
-            <li>Health</li>
-            <div class="progress-bar">
-                <div class="progress" id="progress-health"></div>
-            </div>
+      <ul>
+        <li>Health</li>
+        <div class="progress-bar">
+          <div class="progress" id="progress-health"></div>
+        </div>
 
-            <li>Hunger</li>
-            <div class="progress-bar">
-                <div class="progress" id="progress-hunger"></div>
-            </div>
+        <li>Hunger</li>
+        <div class="progress-bar">
+          <div class="progress" id="progress-hunger"></div>
+        </div>
 
-            <li>Happiness</li>
-            <div class="progress-bar">
-                <div class="progress" id="progress-happiness"></div>
-            </div>
-        </ul>
+        <li>Happiness</li>
+        <div class="progress-bar">
+          <div class="progress" id="progress-happiness"></div>
+        </div>
+      </ul>
     </div>
 
     <section class="actions">
-        <ul>
-            <li><button id="btn-clean">Clean</button></li>
-            <li><button id="btn-feed">Feed</button></li>
-            <li><button id="btn-play">Play</button></li>
-        </ul>
+      <ul>
+        <li><button id="btn-clean">Clean</button></li>
+        <li><button id="btn-feed">Feed</button></li>
+        <li><button id="btn-play">Play</button></li>
+      </ul>
     </section>
 
     <section class="settings">
-        <button>New game</button>
-        <button>Settings</button>
+      <button>New game</button>
+      <button>Settings</button>
     </section>
 
     <section class="new-game-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <input type="text" id="input-pet-name" placeholder="Enter pet's name" />
-            <input type="number" name="day-speed" id="day-speed" placeholder="Day speed in seconds">
-            <button id="save-pet-name">Save</button>
-        </div>
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <input type="text" id="input-pet-name" placeholder="Enter pet's name" />
+        <input
+          type="number"
+          name="day-speed"
+          id="day-speed"
+          placeholder="Day speed in seconds"
+        />
+        <button id="save-pet-name">Save</button>
+      </div>
     </section>
-</body>
+  </body>
 
-<script src="scripts/main.js"></script>
-
+  <script src="scripts/main.js"></script>
 </html>
