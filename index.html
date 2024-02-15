@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Document</title>
 </head>
@@ -11,13 +11,14 @@
 <body>
     <main class="container-pet">
         <div class="personal-info">
-            <p>Name Pet</p>
-            <p>age</p>
+            <p id="pet-name"></p>
+            <p id="pet-age">0</p>
         </div>
         <div class="pet-img">
-            <img src="img/pet-1.png" alt="">
+            <img src="img/pet-1.png" alt="" />
         </div>
     </main>
+
     <div class="pet-points">
         <ul>
             <li>Health</li>
@@ -35,20 +36,29 @@
                 <div class="progress" id="progress-happiness"></div>
             </div>
         </ul>
-
     </div>
 
     <section class="actions">
         <ul>
-            <li><button>Clean</button></li>
-            <li><button>Feed</button></li>
-            <li><Button>Play</Button></li>
+            <li><button id="btn-clean">Clean</button></li>
+            <li><button id="btn-feed">Feed</button></li>
+            <li><button id="btn-play">Play</button></li>
         </ul>
     </section>
-    <div class="settings">
-        <button>Settings</button>
-    </div>
 
+    <section class="settings">
+        <button>New game</button>
+        <button>Settings</button>
+    </section>
+
+    <section class="new-game-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <input type="text" id="input-pet-name" placeholder="Enter pet's name" />
+            <input type="number" name="day-speed" id="day-speed" placeholder="Day speed in seconds">
+            <button id="save-pet-name">Save</button>
+        </div>
+    </section>
 </body>
 
 <script src="scripts/main.js"></script>
