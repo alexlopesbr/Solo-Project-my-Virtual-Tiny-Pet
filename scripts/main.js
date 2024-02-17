@@ -1,16 +1,13 @@
+import { updateAllProgressBars, updateProgressBar } from './ProgressBars.js';
+
 let intervalDay;
 let speedDay;
 
-progressPoint = {
+let progressPoint = {
   health: 100,
   hunger: 100,
   happiness: 100,
   age: 0,
-};
-
-const updateProgressBar = (elementId, percentage) => {
-  const progressBar = document.getElementById(elementId);
-  progressBar.style.width = `${percentage}%`;
 };
 
 const saveConfig = (element) => {
@@ -69,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const progressBars = document.getElementsByClassName('progress');
 function clockDay() {
   const modalGameOver = document.getElementById('game-over');
 
@@ -98,17 +94,9 @@ function clockDay() {
     return;
   }
 
-  updateAllProgressBars();
+  updateAllProgressBars(progressPoint);
   updatePetAge();
-}
-
-function updateAllProgressBars() {
-  for (const progressBar of progressBars) {
-    const id = progressBar.id;
-    const key = id.replace('progress-', '');
-    const percentage = progressPoint[key];
-    updateProgressBar(id, percentage);
-  }
+  return;
 }
 
 function updatePetAge() {
@@ -116,13 +104,13 @@ function updatePetAge() {
   petAge.innerText = progressPoint.age;
 }
 
-randomNumber = () => {
+function randomNumber() {
   const min = 5;
   const max = 10;
   const range = max - min + 1;
   const randomNumber = Math.floor(Math.random() * range) + min;
   return randomNumber;
-};
+}
 
 function startDay() {
   intervalDay = setInterval(clockDay, speedDay);
