@@ -11,7 +11,7 @@
     <main class="container-pet">
       <div class="personal-info">
         <p id="pet-name"></p>
-        <p id="pet-age">0</p>
+        <p id="pet-age"></p>
       </div>
       <div class="pet-img">
         <img src="img/pet-1.png" alt="" />
@@ -46,21 +46,33 @@
     </section>
 
     <section class="settings">
-      <button>New game</button>
+      <button id="btnNewGame">New game</button>
       <button>Settings</button>
     </section>
 
-    <section class="new-game-modal">
+    <section class="game-modal" id="modal">
       <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <input type="text" id="input-pet-name" placeholder="Enter pet's name" />
+        <span id="close-modal">&times;</span>
+        <input
+          type="text"
+          id="input-pet-name"
+          name="pet-name"
+          placeholder="Enter pet's name"
+        />
         <input
           type="number"
           name="day-speed"
-          id="day-speed"
-          placeholder="Day speed in seconds"
+          id="input-speed-day"
+          placeholder="Speed day in seconds"
         />
-        <button id="save-pet-name">Save</button>
+        <button id="save-config">Save</button>
+      </div>
+    </section>
+
+    <section class="game-modal" id="game-over">
+      <div>
+        <p>Game Over</p>
+        <button id="btn-restart">Restart</button>
       </div>
     </section>
   </body>
